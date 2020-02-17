@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        
+        <title>Hobyn</title>
+        
+        <link href="style/commonStyle.css" rel="stylesheet" type="text/css" />  
+        <link href="style/dropdownStyle.css" rel="stylesheet" type="text/css" /> 
+        <link href="style/clickSort.css" rel="stylesheet" type="text/css" />  
+    </head>
+
+    <body>
+        
+        <div id="titleNav">
+
+            <div id='title'>Hobyn</div>
+
+            <div id="nav">
+
+                <div class="dropdown">
+                    <a href=index.html><img title="Home" src="icons/dark/home_icon_H24.png" alt="Home"></a>
+                </div>
+                <div class="dropdown">
+                    <img class="dropHeader" title="Account" src="icons/dark/account_dd_icon_H24.png" alt="Account" >
+                    <div class="dropContent">
+                        <a>Register</a> <br/>
+                        <a>Log In</a> <br/>
+                        <a>Profile</a> <br/>
+                        <a>Log Out</a>
+                    </div> 
+                </div>
+                <div class="dropdown">
+                    <img class="dropHeader" title="Search" src="icons/dark/search_dd_icon_H24.png" alt="Search" >
+                    <div class="dropContent">
+                        <a>Users</a> <br/>
+                        <a>Scores</a> <br/>
+                        <a>Topics</a> 
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <img class="dropHeader" title="Study" src="icons/dark/tutorial_dd_icon_H24.png" alt="Account" >
+                    <div class="dropContent">
+                        <a>Civilizations</a> <br/>
+                        <a>Before</a> <br/>
+                        <a>During</a> <br/>
+                        <a>After</a> <br/>
+                        <a href="map.html">Map</a> <br/>
+                    </div> 
+                </div>          
+                <div class="dropdown">
+                    <img class="dropHeader" title="Test" src="icons/dark/blog_icon_H24.png" alt="Blog">
+                    <div class="dropContent">
+                        <a>Test</a> <br/>
+                        <a>Leaderboard</a> <br/>
+                        <a>Blog</a>
+                    </div>
+                </div>
+            </div> <!-- nav -->  
+        </div> <!-- titleNav -->
+
+        <div id="content">
+            
+            <h3>My Google Maps Demo</h3>
+            <!--The div element for the map -->
+            <div id="map"></div>
+
+            <script src="js/ajax.js"></script>
+            
+            
+            
+            <!-- -------------- OLDER STUFF -------------------------------------------- -->
+            <script>
+                // Initialize and add the map
+                function initMap() {
+                    // The location of Uluru
+                    var mycenae = {lat: 37.731083, lng: 22.756090};
+                    // The map, centered at mycenae
+                    var map = new google.maps.Map(
+                        document.getElementById('map'), {zoom: 5, center: mycenae});
+                    // The marker, positioned at Uluru
+                    var marker = new google.maps.Marker({position: mycenae, map: map});
+                }
+            </script>
+            <!-- -------------- OLDER STUFF -------------------------------------------- -->
+            
+            
+            
+            
+            <!-- -------------- mySQL IMPORT STUFF -------------------------------------------- --
+            <script>
+                var customLabel = {
+                    restaurant: {
+                        label: 'R'
+                    },
+                    bar: {
+                        label: 'B'
+                    }
+                };
+
+                function initMap() {
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        center: new google.maps.LatLng(35.978216, 27.623905),
+                        zoom: 5
+                    });
+                    var infoWindow = new google.maps.InfoWindow;
+
+                    // Change this depending on the name of your PHP or XML file
+                    downloadUrl('https://storage.googleapis.com/mapsdevsite/json/mapmarkers2.xml', function(data) {
+                        var xml = data.responseXML;
+                        var markers = xml.documentElement.getElementsByTagName('marker');
+                        Array.prototype.forEach.call(markers, function(markerElem) {
+                            var id = markerElem.getAttribute('id');
+                            var name = markerElem.getAttribute('name');
+                            var note = markerElem.getAttribute('note');
+                            var type = markerElem.getAttribute('type');
+                            var point = new google.maps.LatLng(
+                                parseFloat(markerElem.getAttribute('lat')),
+                                parseFloat(markerElem.getAttribute('lng')));
+
+                            var infowincontent = document.createElement('div');
+                            var strong = document.createElement('strong');
+                            strong.textContent = name
+                            infowincontent.appendChild(strong);
+                            infowincontent.appendChild(document.createElement('br'));
+
+                            var text = document.createElement('text');
+                            text.textContent = address
+                            infowincontent.appendChild(text);
+                            var icon = customLabel[type] || {};
+                            var marker = new google.maps.Marker({
+                                map: map,
+                                position: point,
+                                label: icon.label
+                            });
+                            marker.addListener('click', function() {
+                                infoWindow.setContent(infowincontent);
+                                infoWindow.open(map, marker);
+                            });
+                        });
+                    });
+                }
+
+
+
+                function downloadUrl(url, callback) {
+                    var request = window.ActiveXObject ?
+                        new ActiveXObject('Microsoft.XMLHTTP') :
+                        new XMLHttpRequest;
+
+                    request.onreadystatechange = function() {
+                        if (request.readyState == 4) {
+                            request.onreadystatechange = doNothing;
+                            callback(request, request.status);
+                        }
+                    };
+
+                    request.open('GET', url, true);
+                    request.send(null);
+                }
+
+                function doNothing() {}
+            </script>
+
+            <!-- -------------- mySQL IMPORT STUFF -------------------------------------------- -->
+    
+            
+            
+    
+    
+            <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIbQQG1zpVT0ATXcSVJ5XSqAGEtIECdnA&callback=initMap">
+            </script>
+            
+        </div> <!-- content. [[Keep track of nesting]] -->
+        
+        <div id='footer'> 
+            Manuel Broco 
+        </div> <!-- footer.  [[Keep track of nesting]] -->
+
+        <script src="js/myIndexUtils.js"></script>
+        <script>
+            "use strict";
+            dropdownFw("dropHeader", "dropContent", "0x"); 
+        </script>
+    </body>
+</html>

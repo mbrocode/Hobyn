@@ -1,0 +1,57 @@
+[
+    {
+        "webUserId": "1",
+        "userEmail": "manuel@gmail.com",
+        "userPassword": "Gr8t;9aS5w0rD",
+        "image": "http://cis-linux2.temple.edu:8080/SP20_3308_tuf42727/pics/manuel.jpg",
+        "birthday": "12/28/1989",
+        "membershipFee": "$1000.00",
+        "userRoleId": "1",
+        "userRoleType": "ADMIN",
+        "errorMsg": ""
+    },
+    {
+        "webUserId": "2",
+        "userEmail": "jMoney@hotmail.com",
+        "userPassword": "1234",
+        "image": "http://cis-linux2.temple.edu:8080/SP20_3308_tuf42727/pics/rich.jpg",
+        "birthday": "07/13/2004",
+        "membershipFee": "$1.00",
+        "userRoleId": "2",
+        "userRoleType": "MEMBER",
+        "errorMsg": ""
+    },
+    {
+        "webUserId": "3",
+        "userEmail": "normGuy@yahoo.com",
+        "userPassword": "11;17;92",
+        "image": "http://cis-linux2.temple.edu:8080/SP20_3308_tuf42727/pics/skate.jpg",
+        "birthday": "11/17/1992",
+        "membershipFee": "$5.00",
+        "userRoleId": "3",
+        "userRoleType": "VIEW",
+        "errorMsg": ""
+    },
+    {
+        "webUserId": "4",
+        "userEmail": "newguy@fbi.giv",
+        "userPassword": "9876",
+        "image": "http://cis-linux2.temple.edu:8080/SP20_3308_tuf42727/pics/notFBI.jpg",
+        "birthday": "",
+        "membershipFee": "$40.50",
+        "userRoleId": "4",
+        "userRoleType": "FBI",
+        "errorMsg": ""
+    },
+    {
+        "webUserId": "5",
+        "userEmail": "friend@cia.gov",
+        "userPassword": "PW1",
+        "image": "http://cis-linux2.temple.edu:8080/SP20_3308_tuf42727/pics/bigBrother.jpg",
+        "birthday": "",
+        "membershipFee": "$40.00",
+        "userRoleId": "5",
+        "userRoleType": "CIA",
+        "errorMsg": ""
+    }
+]

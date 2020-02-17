@@ -1,0 +1,18 @@
+[
+    {
+        "id": "1",
+        "name": "Mycenae",
+        "note": "Mycenaean Capital",
+        "lat": "37.731083",
+        "long": "22.756090",
+        "type": "city"
+    },
+    {
+        "id": "2",
+        "name": "Knossos",
+        "note": "Minoan Capital",
+        "lat": "35.297993",
+        "long": "25.163143",
+        "type": "city"
+    }
+]

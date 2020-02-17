@@ -1,0 +1,52 @@
+[
+    {
+        "userScoreId": "1",
+        "userName": "manuel",
+        "imageUrl": "http://cis-linux2.temple.edu:8080/SP20_3308_tuf42727/pics/manuel.jpg",
+        "longCharacter": "hi there",
+        "userTestAttempts": "8",
+        "userTestScore": "100",
+        "webUserId": "1",
+        "errorMsg": ""
+    },
+    {
+        "userScoreId": "2",
+        "userName": "joe",
+        "imageUrl": "http://cis-linux2.temple.edu:8080/SP20_3308_tuf42727/pics/rich.jpg",
+        "longCharacter": "i'll get a 100 soon",
+        "userTestAttempts": "6",
+        "userTestScore": "68",
+        "webUserId": "2",
+        "errorMsg": ""
+    },
+    {
+        "userScoreId": "3",
+        "userName": "sarah",
+        "imageUrl": "http://cis-linux2.temple.edu:8080/SP20_3308_tuf42727/pics/skate.jpg",
+        "longCharacter": "too easy",
+        "userTestAttempts": "2",
+        "userTestScore": "98",
+        "webUserId": "3",
+        "errorMsg": ""
+    },
+    {
+        "userScoreId": "4",
+        "userName": "shannon",
+        "imageUrl": "http://cis-linux2.temple.edu:8080/SP20_3308_tuf42727/pics/notFBI.jpg",
+        "longCharacter": "interesting",
+        "userTestAttempts": "1",
+        "userTestScore": "88",
+        "webUserId": "4",
+        "errorMsg": ""
+    },
+    {
+        "userScoreId": "5",
+        "userName": "ken",
+        "imageUrl": "http://cis-linux2.temple.edu:8080/SP20_3308_tuf42727/pics/bigBrother.jpg",
+        "longCharacter": "what is this?",
+        "userTestAttempts": "1",
+        "userTestScore": "32",
+        "webUserId": "5",
+        "errorMsg": ""
+    }
+]

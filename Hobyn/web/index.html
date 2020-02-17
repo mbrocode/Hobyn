@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        
+        <title>Hobyn</title>
+        <meta charset="UTF-8">
+        <link href="style/commonStyle.css" rel="stylesheet" type="text/css" />  
+        <link href="style/dropdownStyle.css" rel="stylesheet" type="text/css" /> 
+        <link href="style/clickSort.css" rel="stylesheet" type="text/css" />  
+    </head>
+
+    <body>
+        
+        <div id="titleNav">
+
+            <div id='title'>Hobyn</div>
+
+            <div id="nav">
+
+                <div class="dropdown">
+                    <a href="#/home"><img title="Home" src="icons/dark/home_icon_H24.png" alt="Home"></a>
+                </div>
+                <div class="dropdown">
+                    <img class="dropHeader" title="Account" onclick="myDropdown.toggle(this)" src="icons/dark/account_dd_icon_H24.png" alt="Account" >
+                    <div class="dropContent" id="accountDropDown">
+                        <!--
+                        Note: the logon links below need to be "registered" into the routing 
+                        table, JS files created, and JS functions written. 
+                        -->
+                        <a href="#/register">Register</a> <br/>
+                        <a href="#/login">Log In</a> <br/>
+                        <a href="#/profile">Profile</a> <br/>
+                        <a href="#/logout">Log Out</a>
+                    </div> 
+                </div>
+                <div class="dropdown">
+                    <img class="dropHeader" title="Search" onclick="myDropdown.toggle(this)" src="icons/dark/search_dd_icon_H24.png" alt="Search" >
+                    <div class="dropContent" id="searchDropDown">
+                        <a href="#/users">Users</a> <br/>
+                        <a href="#/userScores">Scores</a> <br/>
+                        <a>Topics</a> 
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <img class="dropHeader" title="Study" onclick="myDropdown.toggle(this)" src="icons/dark/tutorial_dd_icon_H24.png" alt="Account" >
+                    <div class="dropContent" id="studyDropdown">
+                        <a>Civilizations</a> <br/>
+                        <a>Before</a> <br/>
+                        <a>During</a> <br/>
+                        <a>After</a> <br/>
+                        <a href="map.html">Map</a> <br/>
+                    </div> 
+                </div>          
+                <div class="dropdown">
+                    <img class="dropHeader" title="Test" src="icons/dark/blog_icon_H24.png" alt="Blog">
+                    <div class="dropContent">
+                        <a>Test</a> <br/>
+                        <a>Leaderboard</a> <br/>
+                        <a href="#/blog">Blog</a>
+                    </div>
+                </div>
+            </div> <!-- nav -->  
+        </div> <!-- titleNav -->
+
+        <div id='content'> 
+        </div> <!-- content -->
+
+        <div id='footer'> 
+            CIS 3308 - Manuel Broco 
+        </div>
+
+        <script src="js/MakeSortableANDFilterableTable.js"></script>
+        <script src="js/ajax.js"></script>  
+        <script src="js/dropdownFw.js"></script>
+        <script src="js/routeFw.js"></script>
+        <script src="js/components/home.js"></script>
+        <script src="js/components/blog.js"></script>
+        <script src="js/components/users.js"></script>
+        <script src="js/components/userScores.js"></script>
+        <script src="js/components/map.js"></script>
+        <script src="js/myIndexUtils.js"></script>
+        <!-- <script> src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIbQQG1zpVT0ATXcSVJ5XSqAGEtIECdnA" </script> -->
+        
+        <script>
+
+            "use strict";
+            var myRoutes = [];
+
+            myRoutes['#/'] = home;  // page reload will run function home
+            myRoutes['#/home'] = home; // function home
+            myRoutes['#/users'] = users.display; // function users
+            myRoutes['#/userScores'] = userScores.display;
+            //myRoutes['#/map'] = map.display;
+            myRoutes['#/blog'] = blog; // function blog
+            
+
+
+            // routeFw returns an object that has private and public 
+            // data members and methods. 
+            // As input parameter, it takes an object with properties you can set 
+            // or just accept whatever defaults are set by the framework.
+            var myRoutes = routeFw({
+                routeArray: myRoutes,
+                startingPath: '#/home',
+                contentId: "content"
+            });
+
+            // print the routes (check console.log)
+            myRoutes.printRoutes();
+
+            var myDropdown = dropDownFw({
+                dropHeader: "dropHeader",
+                dropContentStyle: "dropContent",
+                hiddenRight: "0px"
+            });
+            
+            dropdownFw("dropHeader", "dropContent", "0x"); 
+        </script>   
+    </body>
+</html>
