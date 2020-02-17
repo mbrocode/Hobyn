@@ -22,3 +22,17 @@ If we decided to expand into Andriod and/or IOS we will be using those perspecti
 
 Link to shell repo:
 [Hobyn repo](https://github.com/mbrocode/Hobyn)
+
+### Project Relevance:
+#### How the proposal is linked to the educational goals of this class:
+	Software design modeling and methodologies
+	Software Architecture
+	User Interaction 
+	Test Driven Development
+	Project Management
+	Version Control
+	Testing 
+	Issue Tracking
+#### Why this goal is important:
+These goals are important because they are what guides the development and continued support and success of any piece of software. By building this (or these) applications, all students will get to see how these base level apps are built and will get experience working together on a project with a large team. They will go through different parts of the process that all software needs to go through. 
+
